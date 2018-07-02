@@ -1,0 +1,16 @@
+data binding
+1. one-way binding
+    -interpolation
+    component se view me data
+    -property binding
+    component se view me data
+    -event
+    view se component me data
+
+2 structural directive
+    -ngIf then else
+    -ngFor of
+    -ngSwitch - *ngswitch - *ngswitchdefault
+    attribute directive
+    -ngModel
+    * matlab property binded jaise [] hota hai

@@ -1,0 +1,11 @@
+
+    <table>
+    <tr (click)="appoutput.emit([false,game])">
+        <td>{{game.name}}</td>
+        <td>{{game.image}}</td>
+       <td *ngIf="game.isnew"><button (click)="newoutput.emit(true)">Back</button></td>
+    </tr>
+    </table>
+
+
+    

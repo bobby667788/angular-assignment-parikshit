@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+   
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <br>
+  <h1>Push pop add input output event emmiter assignment</h1>
+  <br>
+  
+  <div *ngIf="isTrue; else abc">
+  <input type="text" #text1>
+  <input type="text" #text2>
+  <button (click)="games.push({name:text1.value,image:text2.value})">add</button>
+  <button (click)="games.pop()">Pop</button>
+  <button (click)="games.push({name:'New game',image:'https://vignette.wikia.nocookie.net/bleedmancomics/images/2/26/Dante.jpg/revision/latest?cb=20130401125548&format=original'})">push</button>
+  <table>
+  <tr *ngFor="let e of games">
+      <app-practice [name]="e" (appoutput)="change($event)"></app-practice>
+  </tr>
+  </table>
+  </div>
+<ng-template #abc>
+    <app-practice [name]="new" (newoutput)="change2($event)"></app-practice>
+</ng-template>
+<hr>
+<hr>
+<br>
+<h1>Pipe assignment</h1>
+<input type="text" [(ngModel)]="qr" placeholder="search your game">
+<table>
+  <tr *ngFor="let e of games|custom:qr">
+      <app-practice [name]="e" (appoutput)="change($event)"></app-practice>
+  </tr>
+  </table>
+
+
+
